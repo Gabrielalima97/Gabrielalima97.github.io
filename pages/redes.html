@@ -18,17 +18,24 @@
 
     <body>
      
-
-      <form method="post" action="resultado.php">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome">
-      <br>
-      <label for="idade">E-mail:</label>
-      <input type="text" id="email" name="email">
-      <br>
-      <input type="submit" value="Enviar">
-     
-     </form>
+ <form action="/pagina-processa-dados-do-form" method="post">
+    <div>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="usuario_nome" />
+    </div>
+    <div>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="usuario_email" />
+    </div>
+    <div>
+        <label for="msg">Mensagem:</label>
+        <textarea id="msg" name="usuario_msg"></textarea>
+    </div>
+    
+    <div class="button">
+        <button type="submit">Enviar sua mensagem</button>
+    </div>
+</form>
      
         <nav class="red darken-4">
     <div class="nav-wrapper">
