@@ -146,6 +146,8 @@
   </div><!-- esse é o fim do row-->
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firestore-app.js"></script>
+
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -163,11 +165,15 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
 	
 </script>
       <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <!--JavaScript at end of body for optimized loading-->
-      <script type="text/javascript" src="js/ui.js"></script>
+      <script type="text/javascript" src=".js/app.js"></script>
+      <script type="text/javascript" src=".js/db.js"></script>
+      <script type="text/javascript" src=".js/ui.js"></script>
+	
     </body>
   </html>
