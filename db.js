@@ -30,7 +30,8 @@ form.addEventListener('submit', evt => {
     const artistas = {
         nome: form.artistasNome.value,
         descricao: form.artistasDescricao.value,
-        endereco_imagem: form.artistasArquivo.value
+        endereco_imagem: form.artistasArquivo.value,
+        link: from.artistasLink.value
     };
 
     db.collection('artistas').add(artistas)
@@ -40,5 +41,6 @@ form.addEventListener('submit', evt => {
     form.artistasNome.value = '';
     form.artistasDescricao.value = '';
     form.artistasArquivo.value = '';
+    from.artistasLink.value = '';
 
 });
