@@ -28,19 +28,17 @@ form.addEventListener('submit', evt => {
     evt.preventDefault();
 
     const artistas = {
-        nome: form.artistasTitulo.value,
-        descricao: form.sobremesaDescricao.value,
-        link: form.sobremesaLink.value,
-        endereco_imagem: form.sobremesaArquivo.value
+        nome: form.artistasNome.value,
+        descricao: form.artistasDescricao.value,
+        endereco_imagem: form.artistasArquivo.value
     };
 
-    db.collection('sobremesas').add(sobremesa)
+    db.collection('artistas').add(artistas)
         .catch(err => console.log(err));
 
     //reseta o formulario
-    form.sobremesaTitulo.value = '';
-    form.sobremesaDescricao.value = '';
-    form.sobremesaLink.value = '';
-    form.sobremesaArquivo.value = '';
+    form.artistasNome.value = '';
+    form.artistasDescricao.value = '';
+    form.artistasArquivo.value = '';
 
 });
