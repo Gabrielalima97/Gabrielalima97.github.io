@@ -41,7 +41,7 @@ form.addEventListener('submit', evt => {
     form.artistasNome.value = '';
     form.artistasDescricao.value = '';
     form.artistasArquivo.value = '';
-    from.artistasLink.value = '';
+    form.artistasLink.value = '';
 
 });
 
