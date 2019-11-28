@@ -31,7 +31,7 @@ form.addEventListener('submit', evt => {
         nome: form.artistasNome.value,
         descricao: form.artistasDescricao.value,
         endereco_imagem: filePath,
-        link: from.artistasLink.value
+        link: form.artistasLink.value
     };
 
     db.collection('artistas').add(artistas)
