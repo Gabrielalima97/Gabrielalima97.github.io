@@ -37,3 +37,9 @@ const desenhaCard = (data, id) => {
     artistas.innerHTML += html;
 
 };
+
+
+const removeCard = (id) => {
+  const artistas = document.querySelector(`.artistas[data-id=${id}]`);
+  artistas.remove();
+};
