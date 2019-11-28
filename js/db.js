@@ -17,7 +17,7 @@ db.collection('artistas').onSnapshot(snapshot => {
             desenhaCard(change.doc.data(), change.doc.id);
         }
         if (change.type === 'removed') {
-            // remover da pagina tambem
+            removeCard(change.doc.id);
         }
     });
 });
@@ -30,7 +30,7 @@ form.addEventListener('submit', evt => {
     const artistas = {
         nome: form.artistasNome.value,
         descricao: form.artistasDescricao.value,
-        endereco_imagem: form.artistasArquivo.value,
+        endereco_imagem: filePath,
         link: from.artistasLink.value
     };
 
@@ -44,3 +44,13 @@ form.addEventListener('submit', evt => {
     from.artistasLink.value = '';
 
 });
+
+// remove a recipe
+const artistas1 = document.querySelector('.artistas');
+artistas1.addEventListener('click', evt => {
+  if(evt.target.tagName === 'I'){
+    const id = evt.target.getAttribute('data-id');
+    //console.log(id);
+    db.collection('artistas').doc(id).delete();
+  }
+})
