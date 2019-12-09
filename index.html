@@ -242,9 +242,9 @@
             contentType: 'image/jpeg'
         };
         var storageRef = firebase.storage().ref();
-        var uploadTask = storageRef.child('images/' + file.name).put(file, metadata);
+        var uploadTask = storageRef.child('image/' + file.name).put(file, metadata);
          
-        //var teste = storageRef.child('images/' + file.name);
+        //var teste = storageRef.child('image/' + file.name);
 
 	    
         uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
